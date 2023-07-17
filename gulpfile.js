@@ -1,14 +1,21 @@
 const { gulp, src, dest, parallel, series, watch } = require("gulp");
 
-const browserSync = require("browser-sync").create();
+const browsersync = require("browser-sync").create();
 
-function C() {
-  browserSync.init({
+function browserSync() {
+  browsersync.init({
     server: { baseDir: "src/" },
-    files: ["src/*.html", "src/scss/*.scss", "src/ts/*.js"],
     notify: false,
     online: true,
   });
 }
 
-exports.browsersync = browsersync;
+function startWatch() {
+  watch('src/*.html').on('change', browsersync.reload);
+  watch('src/scss/*.scss').on('change', browsersync.reload);
+  watch('src/ts/*.ts').on('change', browsersync.reload);
+}
+
+exports.browsersync = browserSync;
+
+exports.default = parallel(browserSync, startWatch);
