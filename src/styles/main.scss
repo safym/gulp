@@ -22,6 +22,9 @@ $font-weight-bold: 700;
 $font-size-md: 26px;
 $font-size-lg: 46px;
 
+// ----- shadow vars ----- //
+$shadow: rgba(73, 56, 61, 0.12  ) 0px 8px 24px;
+
 // ----- main styles ----- //
 html {
   scroll-behavior: smooth;
@@ -46,7 +49,7 @@ body {
     flex-direction: column;
     row-gap: 2 * $offset;
     position: relative;
-    margin: $offset;
+    margin: 3 * $offset $offset;
   }
 }
 
@@ -67,6 +70,26 @@ body {
 
   &_center {
     text-align: center;
+  }
+}
+
+// ----- paragraph ----- //
+.paragraph {
+  &_center {
+    text-align: center;
+  }
+}
+
+// ----- list ----- //
+.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2 * $offset;
+  opacity: 0.8;
+
+  &__list-item::marker {
+    content: "◉  ";
+    font-size: 1.2em;
   }
 }
 
@@ -102,6 +125,30 @@ body {
     &:active {
       background-color: darken($secondary-color, 7);
     }
+  }
+}
+
+// ----- scroll to top arrow ----- //
+.scrollToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: lighten($bg-color-primary, 5);
+  color: $font-color-dark;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  font-size: $font-size-md;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: $shadow;
+
+  &-show {
+    display: block;
   }
 }
 
@@ -173,6 +220,7 @@ body {
 
   border-radius: 20px;
   background-color: lighten($bg-color-primary, 5);
+  box-shadow: $shadow;
 
   &__imageWrapper {
     border-radius: 10px;
@@ -213,7 +261,7 @@ body {
   }
 
   &__actionsWrapper {
-    display: flex;  
+    display: flex;
     column-gap: 20px;
     justify-content: end;
   }

@@ -15,8 +15,8 @@
         <header class="content__header header">
           <a href="#" class="logo">Brand</a>
           <nav class="header__nav">
-            <a href="#" class="header__link">About</a>
             <a href="#products" class="header__link">Products</a>
+            <a href="#about" class="header__link">About</a>
           </nav>
         </header>
         <section class="content__section section section_columns">
@@ -31,7 +31,7 @@
               <a href="#products" class="section__button button button_primary"
                 >Buy products</a
               >
-              <a href="#" class="section__button button button_secondary"
+              <a href="#about" class="section__button button button_secondary"
                 >About</a
               >
             </div>
@@ -197,8 +197,31 @@
             </div>
           </div>
         </section>
-      </div>
+        <section class="content__section section section_columns" id="about">
+          <div class="section__column">
+            <ul class="section__list list">
+              <li class="list__list-item">Lorem ipsum dolor sit amet.</li>
+              <li class="list__list-item">Aliquam tincidunt mauris eu risus.</li>
+              <li class="list__list-item">Vestibulum auctor dapibus neque.</li>
+            </ul>
+          </div>
+          <div class="section__column">
+            <h1 class="section__title title title_center">About</h1>
+            <p class="section__paragraph paragraph_center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              sagittis dui quis semper volutpat. Phasellus vitae nibh vel tortor
+              maximus tristique. Quisque ut lobortis lorem, sed efficitur enim.
+            </p>
+            <p class="section__paragraph paragraph_center">
+              Sed sagittis dui quis semper volutpat. Phasellus vitae nibh vel tortor
+              maximus tristique. Quisque ut lobortis lorem, sed efficitur enim.
+            </p>
+          </div>
+        </section>
+      </div> 
     </div>
+  </div>
+</div>
     <dialog id="modal" class="dialog">
       <h2 class="dialog__title">Do you want to buy this product?</h2>
       <form method="dialog" class="dialog__form" id="dialogForm">
@@ -220,5 +243,6 @@
         </div>
       </form>
     </dialog>
+    <div class="scrollToTop">&#9650;</div>
   </body>
 </html>
