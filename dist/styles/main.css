@@ -73,18 +73,21 @@ body {
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
-  column-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 .header__nav {
   display: flex;
-  column-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 
 .section {
   display: flex;
   justify-content: space-between;
   row-gap: 30px;
-  column-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 .section_row {
   flex-direction: row;
@@ -102,7 +105,8 @@ body {
 }
 .section__actions-wrapper {
   display: flex;
-  column-gap: 15px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
 }
 .section__title-image {
   border-radius: 150px 30px 30px 30px;
@@ -112,7 +116,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 15px;
-  column-gap: 15px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
 }
 
 .card {
@@ -132,7 +137,8 @@ body {
 .card__image {
   width: 100%;
   height: 250px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: transform 0.2s;
 }
 .card__footer {
@@ -158,12 +164,14 @@ body {
 }
 .dialog__actionsWrapper {
   display: flex;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   justify-content: end;
 }
 .dialog::backdrop {
   background-color: rgba(17, 16, 20, 0.671);
-  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
 @media (max-width: 700px) {
