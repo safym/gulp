@@ -1,0 +1,1 @@
+var MODAL_SELECTOR="#modal",handleClick=function(e){var o,t=document.querySelector(MODAL_SELECTOR),l=t.querySelector("form");(null==(o=e.target.dataset)?void 0:o.buybutton)&&!t.open?t.showModal():"modalConfirm"===(o=e.target).id?(l.submit(),t.close(),alert("Confirmed!")):"modalCancel"===o.id&&(l.reset(),t.close())};window.document.addEventListener("click",handleClick);
