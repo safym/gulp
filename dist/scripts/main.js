@@ -20,4 +20,19 @@ var handleClick = function (event) {
         }
     }
 };
+var toggleScrollToTop = function () {
+    var scrollToTop = document.querySelector('.scrollToTop');
+    // console.log('scroll')
+    if (window.pageYOffset > 100) {
+        scrollToTop.classList.add('scrollToTop-show');
+    }
+    else {
+        scrollToTop.classList.remove('scrollToTop-show');
+    }
+};
+var scrollToTop = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 window.document.addEventListener("click", handleClick);
+window.addEventListener('scroll', toggleScrollToTop);
+document.querySelector('.scrollToTop').addEventListener('click', scrollToTop);

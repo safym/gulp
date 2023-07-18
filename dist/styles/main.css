@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 html {
   scroll-behavior: smooth;
@@ -21,7 +22,7 @@ body {
   flex-direction: column;
   row-gap: 30px;
   position: relative;
-  margin: 15px;
+  margin: 45px 15px;
 }
 
 .logo {
@@ -38,6 +39,21 @@ body {
 }
 .title_center {
   text-align: center;
+}
+
+.paragraph_center {
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  opacity: 0.8;
+}
+.list__list-item::marker {
+  content: "◉  ";
+  font-size: 1.2em;
 }
 
 .button {
@@ -66,6 +82,28 @@ body {
 }
 .button_secondary:active {
   background-color: #ecc1b5;
+}
+
+.scrollToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fffcfa;
+  color: #3b3236;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: rgba(73, 56, 61, 0.12) 0px 8px 24px;
+}
+.scrollToTop-show {
+  display: block;
 }
 
 .header {
@@ -129,6 +167,7 @@ body {
   row-gap: 15px;
   border-radius: 20px;
   background-color: #fffcfa;
+  box-shadow: rgba(73, 56, 61, 0.12) 0px 8px 24px;
 }
 .card__imageWrapper {
   border-radius: 10px;
