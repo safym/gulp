@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #3b3236;
   background-color: #ffede0;
@@ -121,12 +125,15 @@ body {
   border-radius: 20px;
   background-color: #fffcfa;
 }
+.card__imageWrapper {
+  border-radius: 10px;
+  overflow: hidden;
+}
 .card__image {
   width: 100%;
   height: 250px;
-  border-radius: 10px;
   object-fit: cover;
-  overflow: hidden;
+  transition: transform 0.2s;
 }
 .card__footer {
   display: flex;
@@ -136,6 +143,27 @@ body {
 .card__title {
   font-weight: 700;
   text-transform: uppercase;
+}
+.card:hover .card__image {
+  transform: scale(1.2);
+}
+
+.dialog {
+  margin: auto auto;
+  padding: 30px;
+  border-radius: 20px;
+}
+.dialog__title {
+  margin-bottom: 30px;
+}
+.dialog__actionsWrapper {
+  display: flex;
+  column-gap: 20px;
+  justify-content: end;
+}
+.dialog::backdrop {
+  background-color: rgba(17, 16, 20, 0.671);
+  backdrop-filter: blur(5px);
 }
 
 @media (max-width: 700px) {
